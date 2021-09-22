@@ -16,64 +16,584 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="1dp • Border" translatesAutoresizingMaskIntoConstraints="NO" id="1Dz-W0-On3">
-                                <rect key="frame" x="91" y="305" width="232" height="56"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Номер телефона" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f2F-Fe-rO5">
-                                <rect key="frame" x="99" y="319.5" width="136" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пароль" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rGi-3k-qgB">
-                                <rect key="frame" x="99.5" y="437.5" width="59" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="1dp • Border" translatesAutoresizingMaskIntoConstraints="NO" id="gqn-5N-Cuf">
-                                <rect key="frame" x="91" y="420" width="232" height="56"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Забыли пароль?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wx5-Xv-acn">
-                                <rect key="frame" x="137.5" y="741" width="139" height="21"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Авторизация" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqW-lS-aHP">
                                 <rect key="frame" x="109.5" y="144" width="195" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="chevron-left" translatesAutoresizingMaskIntoConstraints="NO" id="CbD-hN-3kv">
+                                <rect key="frame" x="30" y="74" width="24" height="24"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="5a3550e2b3f3d3.7086462115134435547371" translatesAutoresizingMaskIntoConstraints="NO" id="D3b-aJ-5wY">
+                                <rect key="frame" x="157" y="34" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="8jZ-mh-ZrJ"/>
+                                    <constraint firstAttribute="width" constant="100" id="eTX-3i-cn8"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8is-pm-kov">
+                                <rect key="frame" x="17" y="66" width="50" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="" cornerStyle="capsule"/>
+                                <connections>
+                                    <segue destination="3Ul-Vf-QCi" kind="presentation" modalPresentationStyle="fullScreen" id="Vyy-qz-36c"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BUD-0h-0Ka">
+                                <rect key="frame" x="141" y="789" width="134" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Забыли пароль?" cornerStyle="capsule">
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="q57-OG-cMc" kind="presentation" modalPresentationStyle="fullScreen" id="e2v-d1-pfU"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Почта" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0FH-VE-Gs1">
+                                <rect key="frame" x="141" y="327" width="132" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="text:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="9q2-Kk-VXh"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Новый пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AzC-Lf-LX0">
+                                <rect key="frame" x="141" y="431" width="132" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Gj-pE-AC7">
+                                <rect key="frame" x="124" y="556" width="167" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Авторизоваться" cornerStyle="capsule">
+                                    <color key="baseForegroundColor" red="0.94902056459999995" green="0.94890350099999998" blue="0.9607977271" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseBackgroundColor" red="1" green="0.27450980390000002" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="authbut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RcP-IV-8jQ"/>
+                                    <segue destination="hHk-n0-SIc" kind="presentation" modalPresentationStyle="fullScreen" id="2cs-vX-xnk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
                             <constraint firstItem="iqW-lS-aHP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9yM-i0-9BX"/>
-                            <constraint firstItem="gqn-5N-Cuf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Dj0-AF-Wr7"/>
-                            <constraint firstItem="1Dz-W0-On3" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-115" id="FqX-v4-QOl"/>
-                            <constraint firstItem="gqn-5N-Cuf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="HLx-R1-i3I"/>
                             <constraint firstItem="iqW-lS-aHP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="Koe-86-yqK"/>
-                            <constraint firstItem="rGi-3k-qgB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-78" id="Lld-ij-6iF"/>
-                            <constraint firstItem="Wx5-Xv-acn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aaW-fe-jHm"/>
-                            <constraint firstItem="f2F-Fe-rO5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-40" id="i6V-4o-xK9"/>
-                            <constraint firstItem="1Dz-W0-On3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jdr-kr-eru"/>
-                            <constraint firstItem="rGi-3k-qgB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ouQ-cH-ecu"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Wx5-Xv-acn" secondAttribute="bottom" constant="100" id="pAt-aa-Dbg"/>
-                            <constraint firstItem="f2F-Fe-rO5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-118" id="rlY-t2-v2N"/>
+                            <constraint firstItem="CbD-hN-3kv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="LQr-jY-VI6"/>
+                            <constraint firstItem="CbD-hN-3kv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="MLk-Nf-kAd"/>
+                            <constraint firstItem="D3b-aJ-5wY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QdM-fq-r9C"/>
+                            <constraint firstItem="D3b-aJ-5wY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-10" id="yai-mU-Dmc"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20" y="98"/>
+            <point key="canvasLocation" x="18.840579710144929" y="97.767857142857139"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ZlR-7d-7Fe">
+            <objects>
+                <viewController id="hql-mM-LEd" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gwA-fo-zq8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zVW-NX-cLj">
+                                <rect key="frame" x="155" y="819" width="104" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Выход" cornerStyle="capsule">
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="ZX5-iY-KKh" kind="presentation" modalPresentationStyle="fullScreen" id="oTc-uo-vmN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="u5G-Z5-0pR"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hxL-XG-m9n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2447.826086956522" y="-1357.3660714285713"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="C7g-i2-gDb">
+            <objects>
+                <viewController id="hHk-n0-SIc" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="euA-21-E9R">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Позравляю, вы вошли" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S91-nd-bUj">
+                                <rect key="frame" x="59" y="141" width="296" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4mC-yh-f1q">
+                                <rect key="frame" x="41" y="455" width="333" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Приступить к работе" cornerStyle="capsule">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" red="0.92722660300000004" green="0.4137354493" blue="0.1759236753" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="ZX5-iY-KKh" kind="presentation" modalPresentationStyle="fullScreen" id="Z2o-vG-50f"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="A5Y-Rf-zqv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P42-Ez-eHv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1096" y="-653"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Glb-f4-2vT">
+            <objects>
+                <viewController id="ZX5-iY-KKh" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ypa-cE-GM1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="gearshape.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="E2g-ES-VUz">
+                                <rect key="frame" x="338" y="22" width="56" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dz3-V8-xdq">
+                                <rect key="frame" x="14" y="827" width="148" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Телефонная книга">
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" systemColor="systemGray3Color"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zef-yJ-FBb">
+                                <rect key="frame" x="263" y="827" width="125" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Уведомления">
+                                    <color key="baseForegroundColor" white="0.99590488249999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" red="0.92722660300000004" green="0.4137354493" blue="0.1759236753" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="l06-LZ-rGU" kind="presentation" modalPresentationStyle="fullScreen" id="Bw5-qG-QHX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u3m-R7-we8">
+                                <rect key="frame" x="329" y="12" width="75" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="" cornerStyle="capsule"/>
+                                <connections>
+                                    <segue destination="hql-mM-LEd" kind="presentation" modalPresentationStyle="fullScreen" id="sJK-s4-LXZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KnS-d1-7kj"/>
+                        <color key="backgroundColor" white="0.88401719740220719" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2TU-83-MY6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2121.739130434783" y="-640.17857142857144"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="PIO-Hk-VsY">
+            <objects>
+                <viewController id="3Ul-Vf-QCi" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kIp-nO-q8i">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="МЕНЮ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IhJ-XW-gxE">
+                                <rect key="frame" x="158" y="59" width="98" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jft-X9-01F">
+                                <rect key="frame" x="112" y="414" width="190" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Регистрация" cornerStyle="capsule">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" red="0.90399771929999995" green="0.34686738249999999" blue="0.17216926809999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="66f-vg-BGG" kind="presentation" modalPresentationStyle="fullScreen" id="Bl8-lF-U8b"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uev-cD-BMc">
+                                <rect key="frame" x="112" y="310" width="190" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Войти" cornerStyle="capsule">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" red="0.90399771929999995" green="0.34686738249999999" blue="0.17216926809999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="dbm-E4-Qz4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ULJ-9A-wUl">
+                                <rect key="frame" x="163" y="739" width="89" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="О нас" cornerStyle="capsule">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" red="1" green="0.27450980390000002" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="juu-pV-aJn" kind="presentation" modalPresentationStyle="fullScreen" id="jcy-lp-fjk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="i4n-mH-3DZ"/>
+                        <color key="backgroundColor" red="0.94902378320000003" green="0.94886630770000002" blue="0.9647235274" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YXh-MM-3CJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="882.60869565217399" y="103.79464285714285"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="mWn-FG-CvS">
+            <objects>
+                <viewController id="66f-vg-BGG" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xkU-hq-5qj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Регистрация" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fEx-H2-e8h">
+                                <rect key="frame" x="110" y="136" width="190" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" ambiguous="YES" image="5a3550e2b3f3d3.7086462115134435547371" translatesAutoresizingMaskIntoConstraints="NO" id="gF5-H9-vWh">
+                                <rect key="frame" x="155" y="37" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Jki-sM-X0H"/>
+                                    <constraint firstAttribute="width" constant="100" id="nro-1m-eT8"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="chevron-left" translatesAutoresizingMaskIntoConstraints="NO" id="wHd-Xo-Snx">
+                                <rect key="frame" x="193" y="726" width="24" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aap-8w-5hm">
+                                <rect key="frame" x="180" y="718" width="50" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="" cornerStyle="capsule"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="Wen-as-Fe4"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Почта" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jid-Bi-7OL">
+                                <rect key="frame" x="141" y="263" width="132" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SdJ-Gp-iQY">
+                                <rect key="frame" x="139" y="337" width="132" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Roo-32-95C">
+                                <rect key="frame" x="124" y="492" width="167" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Регистрация" cornerStyle="capsule">
+                                    <color key="baseForegroundColor" red="0.94902056459999995" green="0.94890350099999998" blue="0.9607977271" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseBackgroundColor" red="1" green="0.27450980390000002" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="hHk-n0-SIc" kind="presentation" modalPresentationStyle="fullScreen" id="DVR-0N-qxP"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Повторите пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ccy-cO-mzD">
+                                <rect key="frame" x="139" y="396" width="132" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="oOH-kk-Pk0"/>
+                        <color key="backgroundColor" red="0.94902378320000003" green="0.94886630770000002" blue="0.9647235274" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XFK-gZ-EnT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1767" y="140"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Yd9-of-Wzn">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="juu-pV-aJn" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aRg-Nj-oyA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1100"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qfp-9W-jab">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="1100"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MsU-xK-TXe">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1100"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="1000" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dgB-zu-47g">
+                                                <rect key="frame" x="0.0" y="21" width="414" height="1079"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <string key="text">Google собирает пользовательские данные для того, чтобы наши сервисы были более удобными. Благодаря этому мы не только определяем, на каком языке Вы задали запрос, но решаем более сложные задачи, например автоматически подбираем полезные объявления или интересные видеоролики на YouTube, а также помогаем находить контакты друзей и знакомых в Интернете. Тип данных, которые мы собираем, зависит от того, как Вы используете наши продукты и какие настройки конфиденциальности заданы в Вашем аккаунте.
+
+Если Вы не выполнили вход в аккаунт Google, мы регистрируем информацию, которую собираем с помощью уникальных идентификаторов, связанных с браузерами, приложениями и устройствами. Это позволяет нам запоминать Ваши настройки и другие данные, чтобы Вам не приходилось указывать их заново при новом сеансе.
+
+Если Вы выполнили вход, мы собираем и сохраняем в аккаунте Google информацию, которые обрабатываем как личные данные.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d2C-7c-z0d">
+                                                <rect key="frame" x="339" y="21" width="67" height="31"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="gray" title="Выход" cornerStyle="capsule">
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <segue destination="3Ul-Vf-QCi" kind="presentation" modalPresentationStyle="fullScreen" id="BqJ-hk-1I3"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.94902378320000003" green="0.94886630770000002" blue="0.9647235274" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1100" id="0YY-mk-lPP"/>
+                                            <constraint firstAttribute="width" constant="414" id="AVy-xW-Pmr"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="MsU-xK-TXe" secondAttribute="bottom" id="357-1Z-Ozv"/>
+                                    <constraint firstAttribute="trailing" secondItem="MsU-xK-TXe" secondAttribute="trailing" id="HKy-Eo-fE9"/>
+                                    <constraint firstItem="MsU-xK-TXe" firstAttribute="top" secondItem="qfp-9W-jab" secondAttribute="top" id="b3O-MP-dWR"/>
+                                    <constraint firstItem="MsU-xK-TXe" firstAttribute="leading" secondItem="qfp-9W-jab" secondAttribute="leading" id="tHc-xi-bLS"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="TUW-Bc-TM5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qfp-9W-jab" firstAttribute="leading" secondItem="TUW-Bc-TM5" secondAttribute="leading" id="8dV-Ut-dSs"/>
+                            <constraint firstAttribute="bottom" secondItem="qfp-9W-jab" secondAttribute="bottom" id="T7Y-Vh-9zV"/>
+                            <constraint firstItem="qfp-9W-jab" firstAttribute="top" secondItem="aRg-Nj-oyA" secondAttribute="top" id="mgW-9G-yhd"/>
+                            <constraint firstItem="qfp-9W-jab" firstAttribute="trailing" secondItem="TUW-Bc-TM5" secondAttribute="trailing" id="tp8-2e-v1r"/>
+                        </constraints>
+                    </view>
+                    <size key="freeformSize" width="414" height="1100"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UKT-cj-2Z1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2471.0144927536235" y="107.8125"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="qPO-cd-ZsH">
+            <objects>
+                <viewController id="q57-OG-cMc" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="j5S-jk-v09">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Адрес электронной почты" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vfB-y1-pAW">
+                                <rect key="frame" x="102" y="184" width="211" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Новый пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qYg-jV-eZq">
+                                <rect key="frame" x="141" y="353" width="132" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fb4-i0-ocn">
+                                <rect key="frame" x="124" y="473" width="167" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Сбросить пароль" cornerStyle="capsule">
+                                    <color key="baseForegroundColor" red="0.94902056459999995" green="0.94890350099999998" blue="0.9607977271" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseBackgroundColor" red="1" green="0.27450980390000002" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="D4p-Uj-CDC" kind="presentation" modalPresentationStyle="fullScreen" id="JHq-mc-p1X"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Почта" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K5k-r3-Sxf">
+                                <rect key="frame" x="141" y="275" width="132" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Z6-Gy-3b6">
+                                <rect key="frame" x="161" y="809" width="92" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Выход" cornerStyle="capsule">
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="3Ul-Vf-QCi" kind="presentation" modalPresentationStyle="fullScreen" id="cC5-MV-oTv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lAl-88-Rde"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ivj-kj-pbQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3228.985507246377" y="111.83035714285714"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="7jW-eM-A6H">
+            <objects>
+                <viewController id="D4p-Uj-CDC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Csd-3O-wUe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Rectangle 3" translatesAutoresizingMaskIntoConstraints="NO" id="aIc-yS-xFb">
+                                <rect key="frame" x="-2" y="1" width="414" height="401"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ваш пароль изменен" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oDA-xh-xkR">
+                                <rect key="frame" x="19" y="177" width="377" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0qw-3g-ncW">
+                                <rect key="frame" x="70" y="464" width="275" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Выход в главное меню" cornerStyle="capsule">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" red="0.92722660300000004" green="0.4137354493" blue="0.1759236753" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="3Ul-Vf-QCi" kind="presentation" modalPresentationStyle="fullScreen" id="J1U-Dj-0hB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Vcr-KW-3C6"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nd5-KM-AFd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4002.898550724638" y="126.5625"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="bGG-Nb-oPA">
+            <objects>
+                <viewController id="l06-LZ-rGU" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Cx1-2c-DnE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="gearshape.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ldx-hS-dR7">
+                                <rect key="frame" x="338" y="22" width="56" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HXi-Xe-rST">
+                                <rect key="frame" x="20" y="827" width="148" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Телефонная книга">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" red="0.92722660300000004" green="0.4137354493" blue="0.1759236753" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="ZX5-iY-KKh" kind="presentation" modalPresentationStyle="fullScreen" id="RRx-fe-sM4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jLL-31-EKx">
+                                <rect key="frame" x="271" y="827" width="123" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Уведомления">
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" systemColor="systemGray3Color"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Abd-5c-Bbx">
+                                <rect key="frame" x="329" y="12" width="75" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="" cornerStyle="capsule"/>
+                                <connections>
+                                    <segue destination="hql-mM-LEd" kind="presentation" modalPresentationStyle="fullScreen" id="ffN-Ao-duA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="J03-Hq-fuy"/>
+                        <color key="backgroundColor" red="0.88234454389999994" green="0.88234722610000005" blue="0.8823532462" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YDT-JK-p64" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2857.971014492754" y="-640.17857142857144"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="cC5-MV-oTv"/>
+        <segue reference="oTc-uo-vmN"/>
+        <segue reference="2cs-vX-xnk"/>
+        <segue reference="ffN-Ao-duA"/>
+        <segue reference="dbm-E4-Qz4"/>
+    </inferredMetricsTieBreakers>
     <resources>
-        <image name="1dp • Border" width="232" height="56"/>
+        <image name="5a3550e2b3f3d3.7086462115134435547371" width="512" height="512"/>
+        <image name="Rectangle 3" width="414" height="401"/>
+        <image name="chevron-left" width="24" height="24"/>
+        <image name="gearshape.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
